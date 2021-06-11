@@ -19,7 +19,7 @@ An esolang language that consists of a series of infinite tapes stacked on top o
 * all other symbols are ignored.
 * if a line of code for a tape doesn't end on `#`, it continues onto the next line
 * to save "#" onto a tape, use `\#`
-* to save "\" onto a tape, use `\\`
+* to save "\\" onto a tape, use `\\`
 
 ### list of commands:
 * `>`,`<` - move tape position to the right/left
