@@ -3,7 +3,7 @@ An esolang language that consists of a series of infinite tapes stacked on top o
 
 ## Features:
 * all values that were not initiated within the code start at 69
-* all of the tapes are executed till the 69 value is reached, going left to right top to bottom
+* all of the tapes (excluding output tape) are executed till the 69 value is reached, going left to right top to bottom
 * output tape is always the lowest one, and starts empty (filled with 69)
 * position pointer points to index of 2 tapes below current one, and the index is kept when execution moves to the lower tape (but the tapes that it points to change)
 
