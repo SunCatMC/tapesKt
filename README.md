@@ -2,6 +2,7 @@
 An esolang language that consists of a series of infinite tapes stacked on top of each other
 
 ## Features:
+* each line of code defines a tape
 * all values that were not initiated within the code start at 69
 * all of the tapes (excluding output tape) are executed till the 69 value is reached, going left to right top to bottom
 * output tape is always the lowest one, and starts empty (filled with 69)
@@ -12,10 +13,10 @@ An esolang language that consists of a series of infinite tapes stacked on top o
 * space
 * letters (case insensitive])
 * everything else
-* end-of-tape (signified in code as `#`, use `\#` to save actual #)
+* end-of-tape (signified in code as `#`, use `\#` to save actual "#")
 
 ### notes about symbols:
-* 69 readable symbols, `#` is value 69
+* 69 readable symbols, end-of-tape (`#`) is value 69
 * all other symbols are ignored.
 * if a line of code for a tape doesn't end on `#`, it continues onto the next line
 * to save "#" onto a tape, use `\#`
