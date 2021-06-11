@@ -5,7 +5,7 @@ plugins {
     application
 }
 
-group = "me.suncat"
+group = "me.suncatmc.tapes"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -27,7 +27,7 @@ tasks.withType<KotlinCompile> {
 val className = "MainKt"
 
 application {
-    mainClassName = className
+    mainClass.set("$group.Main")
 }
 
 tasks.jar {
