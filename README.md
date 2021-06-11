@@ -12,7 +12,7 @@ An esolang language that consists of a series of infinite tapes stacked on top o
 * numbers
 * space
 * letters (case insensitive])
-* everything else
+* everything else printable within ASCII
 * end-of-tape (signified in code as `#`, use `\#` to save actual "#")
 
 ### notes about symbols:
