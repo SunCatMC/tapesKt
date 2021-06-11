@@ -34,5 +34,5 @@ An esolang language that consists of a series of infinite tapes stacked on top o
 comments can be written either after `#`, or after `\`
 
 ### output notes:
-* if output tape holds any value above 69, it gets capped at % 69
+* if output tape holds any value above 69 or below 0, it gets capped via performing unsigned mod 69 of the value
 * exactly 69 ends printing of the tape
