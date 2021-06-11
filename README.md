@@ -1,22 +1,27 @@
 # Tapes all the way down
-An esolang language that consists of a series of tapes stacked on top of each other
+An esolang language that consists of a series of infinite tapes stacked on top of each other
 
-all out of bounds values are equal to 69
+## Features:
+* all values that were not initiated within the code start at 69
+* all of the tapes are executed till the 69 value is reached, going left to right top to bottom
+* output tape is always the lowest one, and starts empty (filled with 69)
+* position pointer points to index of 2 tapes below current one, and is kept when execution moves to the lower tape
 
-all of the tapes are executed till the 69 value is reached, going left to right top to bottom
-
-output tape is always the lowest one, and starts empty (filled with 69)
-
-list of valid symbols on the tape:
+### list of valid symbols on the tape:
 * numbers
 * space
 * letters (case insensitive])
 * everything else
 * end-of-tape (signified in code as `#`, use `\#` to save actual #)
 
-69 readable symbols, `#` is value 69
+### notes about symbols:
+* 69 readable symbols, `#` is value 69
+* all other symbols are ignored.
+* if a line of code for a tape doesn't end on `#`, it continues onto the next line
+* to save "#" onto a tape, use `\#`
+* to save "\" onto a tape, use `\\`
 
-list of commands:
+### list of commands:
 * `>`,`<` - move tape position to the right/left
 * `>n`, `<n` - move tape by n steps (defined as a symbol value)
 * `^` - copy value into memory cell
@@ -26,5 +31,8 @@ list of commands:
 * `o` - output current state of the output tape (with line break), starting from current position
 * `i` - put line of input into tape below, starting from current position
 
-if output tape holds value above 69, it gets capped at % 69
-exactly 69 ends printing of the tape
+comments can be written either after `#`, or after `\`
+
+### output notes:
+* if output tape holds any value above 69, it gets capped at % 69
+* exactly 69 ends printing of the tape
