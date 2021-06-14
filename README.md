@@ -1,5 +1,6 @@
-# Tapes all the way down
-An esolang language that consists of a series of infinite tapes stacked on top of each other
+# Tapes all the way down.kt
+Interpreter for an esolang language Tapes all the way down
+This esolang's code consists of a series of infinite tapes stacked on top of each other
 
 ## Features:
 * each line of code defines a tape
