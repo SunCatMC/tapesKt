@@ -1,7 +1,6 @@
 package me.suncatmc.tapes.data.structures
 
 open class Symbol(open val value: Int) {
-
     constructor(ch: Char?) : this(charToSymbolValue(ch)!!)
 
     override fun toString(): String {
