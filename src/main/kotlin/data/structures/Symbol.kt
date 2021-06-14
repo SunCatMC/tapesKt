@@ -10,7 +10,7 @@ open class Symbol(open val value: Int) {
     }
 
     companion object {
-        protected val charList = ('0'..'9').toMutableList().apply {
+        val supportedCharList = ('0'..'9').toMutableList().apply {
             add(' ')
             addAll('A'..'Z')
             addAll('!'..'/')
@@ -24,8 +24,8 @@ open class Symbol(open val value: Int) {
                 null -> {
                     69
                 }
-                in charList -> {
-                    charList.indexOf(ch)
+                in supportedCharList -> {
+                    supportedCharList.indexOf(ch)
                 }
                 else -> {
                     null
@@ -35,17 +35,17 @@ open class Symbol(open val value: Int) {
 
         fun symbolValueToChar(n: Int): Char? {
             val newN = when (n) {
-                charList.size -> {
+                supportedCharList.size -> {
                     null
                 }
-                in charList.indices -> {
+                in supportedCharList.indices -> {
                     n
                 }
                 else -> {
-                    n % 69 + (if (n < 0) charList.size else 0)
+                    n % 69 + (if (n < 0) supportedCharList.size else 0)
                 }
             }
-            return if (newN == null) null else charList[newN]
+            return if (newN == null) null else supportedCharList[newN]
         }
     }
 }
